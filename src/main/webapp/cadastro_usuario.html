@@ -2,16 +2,23 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Cadastro de Usuário</title>
+    <title>Novo Usuário</title>
 </head>
 <body>
-<form method="post" action="/CadastroUsuario">
-    <label >First name:</label><br>
-    <input type="text" value="nome" placeholder="escreva seu nome"><br>
-    <label>Last name:</label><br>
-    <input type="text" value="sobrenome"><br>
-    <input type="submit" value="Enviar"><br>
-    <input type="reset"><br>
-</form>
+
+    <h3>Cadastro de Usuário</h3>
+
+    <form method="post" action="CadastroUsuario">
+         Nome: <br />
+        <input type="text" name="nome" size="120" autofocus> <br />
+         Login: <br />
+        <input type="text" name="Login" size="40"> <br />
+         Senha: <br />
+        <input type="password" name="senhaConfirmada" size="40"> </br>
+            <p>
+                <input type="Submit" value="Enviar" >
+                <input type="Reset" value="Limpar">
+            </p>
+    </form>
 </body>
 </html>
