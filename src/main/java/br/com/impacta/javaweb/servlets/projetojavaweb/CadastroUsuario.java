@@ -16,17 +16,25 @@ public class CadastroUsuario extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        response.setCharacterEncoding("ISO-8859-1");
+        response.setCharacterEncoding("UTF-8");
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
+
+        String nome = request.getParameter("nome");
+        String login = request.getParameter("login");
+        String senha = request.getParameter("senha");
+        String senhaConfirmada = request.getParameter("senhaConfirmada");
+
+
         out.println("<html>");
         out.println("<head>");
         out.println("<title>Cadastro realizado com sucesso!</title>");
         out.println("</head>");
         out.println("<body>");
-        out.println("<h1>Cadastro realizado com sucesso!</h1>");
-        out.println("<h4>Nome:</h4> " + request.getParameter("nome"));
-        out.println("<h4>Login:</h4> " + request.getParameter("login"));
+        out.println("<h4>Nome:</h4> " + nome);
+        out.println("<h4>Login:</h4> " + login);
+        out.println("<h4>Senha:</h4> " + senha);
+        out.println("<h4>SenhaConfirmada:</h4> " + senhaConfirmada);
         out.println("<body>");
         out.println("</html");
 
